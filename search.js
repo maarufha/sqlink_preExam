@@ -1,5 +1,5 @@
 /* Search string in folders and sunfolders with the same extension that the user brings 
-created by: Hadi Abu-Maruf */
+created by: Hadi Maruf */
 
 //check if at least the user insert file extension and a word (it can be a string also)
 if (process.argv.length <= 3) {
@@ -8,8 +8,14 @@ if (process.argv.length <= 3) {
 }
 
 var extension = process.argv[2];
-var String = process.argv[3];
+var String="";
+for(var i=3 ; i<process.argv.length ; i++){
+    if(i==process.argv.length-1)
+        String+=process.argv[i];        
+    else
+        String+=process.argv[i]+" ";
 
+}
 //file system and path folder
 var fs = require('fs'), path = require('path');
 
