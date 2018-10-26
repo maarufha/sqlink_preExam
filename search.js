@@ -44,7 +44,7 @@ function readDirerctory(dir){
             //split the file name form its extension
             var ext=next.split('.').pop();
             //check if we have the file extension equal to the input extension
-            if(ext.localeCompare(ext)==false){
+            if(ext.localeCompare(extension)==false){
                 //get the content of the file
                 var data=fs.readFileSync(next, 'utf8')
                 var n = data.search(String);
